@@ -38,8 +38,25 @@ main {
 			align-items: center;
 			font-size: 4rem;
 
+			h1 {
+				span {
+					// inline 요소는 transform이 안 먹음. 그렇다고 block처리만 하면 줄바뀌고 이상해지므로 inline-block 처리 해야 함.
+					display: inline-block;
+					transform: scale(3);
+					opacity: 0;
+					transition-duration: 1s;
+				}
+			}
+			// 박스가 활성화 되었을 때
 			&.on {
 				opacity: 1;
+
+				h1 {
+					span {
+						transform: scale(1);
+						opacity: 1;
+					}
+				}
 			}
 		}
 	}

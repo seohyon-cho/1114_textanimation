@@ -28,3 +28,5 @@ btns.forEach((btn, idx) => {
 		[btns, boxs].forEach((el) => activation(el, idx));
 	});
 });
+
+// 모션 작업
