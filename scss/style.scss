@@ -42,7 +42,7 @@ main {
 				span {
 					// inline 요소는 transform이 안 먹음. 그렇다고 block처리만 하면 줄바뀌고 이상해지므로 inline-block 처리 해야 함.
 					display: inline-block;
-					transform: scale(3);
+					transform: scale(3) rotate(120deg) translateX(100px);
 					opacity: 0;
 					transition-duration: 1s;
 				}
@@ -53,7 +53,7 @@ main {
 
 				h1 {
 					span {
-						transform: scale(1);
+						transform: scale(1) rotate(0) translateX(0);
 						opacity: 1;
 					}
 				}
