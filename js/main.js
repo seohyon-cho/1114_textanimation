@@ -7,3 +7,18 @@ function splitLetter(el) {
 	}
 	dom.innerHTML = tags;
 }
+
+const btns = document.querySelectorAll('li');
+const boxs = document.querySelectorAll('article');
+
+function activation(arr, index) {
+	arr.forEach((el) => el.classList.remove('on'));
+	arr[index].classList.add('on');
+}
+btns.forEach((btn, idx) => {
+	btn.addEventListener('click', () => {
+		// activation(btns, idx);
+		// activation(boxs, idx);
+		[btns, boxs].forEach((el) => activation(el, idx));
+	});
+});
